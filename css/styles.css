@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+*{
+    font-family: 'Hind', sans-serif;
+}
+.babas{
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: .25em;
+    font-size: 8vw;
+}
+
+.mukta{
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+    font-size: 2vw;
+}
+.violet_enunce{
+    color: #00ADB5;
+}
+.footer-links{
+    list-style-type:none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.footer-final{
+    font-size: 12px;
+}
+
+.div-contact{
+    margin-top: 35vh !important;
+    margin-bottom: 15vh;
+}
+
+.contain-carousel{
+    margin-top: 20vh !important;
+}
+#nav_{
+    transition: top 0.6s;
+    background-color: #EEE !important;
+}
+#particles-js{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.h100{
+    height: 100%;
+}
+
+.gotop-container{
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
+}
+
+.gotop-button{
+    width: 0rem;
+    height: 0rem;
+    background: #00ADB5;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+
+.gotop-button i {
+    position: absolute;
+    font-size: 1.7rem;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%) scale(0);
+    color: #212529;
+    transition: .2s;
+} 
+
+.show{
+    z-index: 10;
+}
+
+.show .gotop-button {
+    animation: popup .3s ease-in-out;
+    width: 4.4rem ;
+    height: 4.4rem ;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 6rem;
+        height: 6rem;
+    }
+    100%{
+        width: 4.4rem;
+        height: 4.4rem;
+    }
+}
+@media only screen and (max-width:990px){
+    .babas{
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: .25em;
+        font-size: 11vw;
+    }
+    .mukta{
+        font-family: 'Mukta', sans-serif;
+        font-weight: 500;
+        font-size: 4vw;
+    }
+    #presentation{
+        margin-top: 10vh !important;
+        height: 90vh;
+        justify-content: start !important;
+    }
+    .footer-links{
+        font-size: 15px;
+    }
+    
+    .footer-final{
+        flex-direction: column-reverse;
+        font-size: 10px;
+    }
+
+   .caca{
+    margin-top: 10px;
+    margin-bottom: 10px;
+   }
+}
+@media only screen and (min-width:990px){
+    #presentation{
+        height: 90vh;
+    }
+
+    .hoja{
+        height: 100vh;
+    }
+    #nav_{
+        height: 7vh;
+    }
+    .navbar-nav{
+        align-items: center;
+    }
+    .nav-item{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position:relative;
+    }
+
+    .nav-item:hover{
+        color:black;
+    }
+    .nav-item::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00ADB5;
+        z-index: -1;
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+        transform: scaleY(0);
+    }
+    .nav-item:hover::before{
+        transform: scaleY(1);
+    }
+
+    #navbarNav{
+        height: 100%;
+    }
+    #img_quiensoy{
+        width: 200px;
+        transition: width 0.5s;
+    }
+    #img_quiensoy:hover{
+        width: 250px;
+    }
+}
